@@ -2,9 +2,22 @@ package ed;
 
 import java.util.Arrays;
 
+
 public class Vetor {
 	private Aluno [] alunos = new Aluno [99];
 	private int totalDeAlunos = 0;
+	
+	
+	
+	public boolean listaVazia() {
+		for (int i=0; i< alunos.length; i++) {
+			if(alunos[i] != null) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
 	
 	public void adiciona (Aluno aluno) {
 		this.alunos[totalDeAlunos] = aluno;
